@@ -1,0 +1,9 @@
+.isColor {
+  color: green;
+  font-style: italic;
+}
+
+/* import csss taiwindcss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
