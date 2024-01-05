@@ -6,7 +6,7 @@ import RootRightCmp from "./rootRight";
 // import contetx
 import { ThemeContext, TitleContext } from "../main";
 import WithOutContext from "../components/withOutContext";
-import "../index.css";
+import "../index.scss";
 
 import {
   ClerkProvider,
@@ -42,13 +42,14 @@ export default function Root() {
   return (
     <>
         <ThemeContext.Provider value={initialConntext}>
+          <div style={{display: "flex", height: "100%"}}>
           <div
             id="sidebar"
             className={initialConntext.theme ? "dark" : "light"}
           >
-            <h1>React Router Contacts</h1>
+            <h1>this is demo test vti</h1>
             <div>
-              <TitleContext.Provider value={"this is tile context"}>
+              <TitleContext.Provider value={"...."}>
                 <form id="search-form" role="search">
                   <input
                     id="q"
@@ -81,13 +82,10 @@ export default function Root() {
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/">Layout</Link>
                 </li>
                 <li>
                   <Link to="userList">User List</Link>
-                </li>
-                <li>
-                  <a href={`admin/contacts/2`}>Your Friend</a>
                 </li>
                 <li>
                   <Link to="admin/testTaiwind">Tailwindcss</Link>
@@ -99,6 +97,7 @@ export default function Root() {
             </nav>
           </div>
           <RootRightCmp />
+          </div>
         </ThemeContext.Provider>
     </>
   );

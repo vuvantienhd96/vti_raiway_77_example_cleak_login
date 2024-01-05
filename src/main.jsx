@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             errorElement: <ErrorPage />,
             children: [
               {
-                path: '/admin/homepage',
+                path: '',
                 element: <HomePage />,
               },
               {
